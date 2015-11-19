@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment version="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -9,89 +10,72 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="PcR-2M-tXO"/>
+                        <viewControllerLayoutGuide type="bottom" id="zF8-sm-Yej"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-Tb-L4p">
-                                <rect key="frame" x="31" y="196" width="301" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGG-iK-A9Q">
+                                <rect key="frame" x="122" y="204" width="77" height="30"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Ak-g8-LbE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsD-aS-SxY">
+                                <rect key="frame" x="281" y="88" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQd-GA-1gb">
+                                <rect key="frame" x="128" y="273" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRd-zx-bo4">
+                                <rect key="frame" x="0.0" y="84" width="273" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-Tb-L4p">
+                                <rect key="frame" x="0.0" y="147" width="320" height="29"/>
                                 <segments>
                                     <segment title="Seconds"/>
                                     <segment title="Minutes"/>
                                     <segment title="Hour"/>
                                 </segments>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="203" width="259" height="29"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="71" y="192" width="313" height="29"/>
-                                </variation>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGG-iK-A9Q">
-                                <rect key="frame" x="143" y="285" width="77" height="30"/>
-                                <state key="normal" title="Convert">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="107" y="269" width="77" height="30"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="189" y="260" width="77" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="updateButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Ak-g8-LbE"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PjF-tw-IY6">
-                                <rect key="frame" x="31" y="122" width="72" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="132" width="169" height="30"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="71" y="123" width="238" height="30"/>
-                                </variation>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsD-aS-SxY">
-                                <rect key="frame" x="31" y="62" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="236" y="136" width="39" height="21"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="328" y="127" width="39" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQd-GA-1gb">
-                                <rect key="frame" x="149" y="368" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="113" y="330" width="65" height="21"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="195" y="321" width="65" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zQd-GA-1gb" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="8dy-6R-l0H"/>
+                            <constraint firstItem="zQd-GA-1gb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="BVO-5d-Y2h"/>
+                            <constraint firstItem="NsD-aS-SxY" firstAttribute="leading" secondItem="nRd-zx-bo4" secondAttribute="trailing" constant="8" id="BhR-Ls-y5C"/>
+                            <constraint firstItem="Fjj-Tb-L4p" firstAttribute="top" secondItem="NsD-aS-SxY" secondAttribute="bottom" constant="38" id="MeD-vN-bML"/>
+                            <constraint firstItem="Fjj-Tb-L4p" firstAttribute="top" secondItem="nRd-zx-bo4" secondAttribute="bottom" constant="33" id="SCh-g6-IK6"/>
+                            <constraint firstItem="Fjj-Tb-L4p" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="cgh-9S-YbU"/>
+                            <constraint firstItem="zQd-GA-1gb" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="df8-Ql-Ypk"/>
+                            <constraint firstItem="zQd-GA-1gb" firstAttribute="top" secondItem="gGG-iK-A9Q" secondAttribute="bottom" constant="46" id="fZe-7h-w54"/>
+                            <constraint firstItem="zQd-GA-1gb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="hk7-ga-0cg"/>
+                            <constraint firstItem="gGG-iK-A9Q" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="rEZ-3e-GHl"/>
+                            <constraint firstItem="gGG-iK-A9Q" firstAttribute="top" secondItem="Fjj-Tb-L4p" secondAttribute="bottom" constant="29" id="sKk-Za-sO2"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="InputField" destination="PjF-tw-IY6" id="96m-Um-rg6"/>
+                        <outlet property="inputField" destination="nRd-zx-bo4" id="Y8Y-u7-hkO"/>
                         <outlet property="outputField" destination="zQd-GA-1gb" id="FyH-sd-XbG"/>
                         <outlet property="segmentController" destination="Fjj-Tb-L4p" id="AGU-2F-Gbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="135"/>
+            <point key="canvasLocation" x="73" y="127"/>
         </scene>
     </scenes>
 </document>
