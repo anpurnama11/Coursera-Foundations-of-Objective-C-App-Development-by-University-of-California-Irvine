@@ -1,0 +1,11 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'Currency Limited' do
+pod "CurrencyRequest"
+end
+
+target 'Currency LimitedTests' do
+
+end
+
