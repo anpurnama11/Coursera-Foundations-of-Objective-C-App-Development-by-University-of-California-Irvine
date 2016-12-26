@@ -11,11 +11,13 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *inputField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentController;
+@property (weak, nonatomic) IBOutlet UIButton *clearButton;
 @property (weak, nonatomic) IBOutlet UILabel *outputField;
+@property (weak, nonatomic) IBOutlet UILabel *kind;
 
 @end
 
-int convert(int day, int index)
+int convert(NSInteger day, NSInteger index)
 {
     if(index==0)
         return day*86400;
@@ -26,18 +28,26 @@ int convert(int day, int index)
 
 @implementation ViewController
 - (IBAction)updateButton:(id)sender {
-    int input=[self.inputField.text intValue];
+    int input=self.inputField.text.intValue;
     if (self.segmentController.selectedSegmentIndex==0) {
         self.outputField.text=[NSString stringWithFormat:@"%d",convert(input, self.segmentController.selectedSegmentIndex)];
+        self.kind.text=@"Seconds";
     }
     else if(self.segmentController.selectedSegmentIndex==1)
     {
                 self.outputField.text=[NSString stringWithFormat:@"%d",convert(input, self.segmentController.selectedSegmentIndex)];
+                self.kind.text=@"Minutes";
     }
     else
     {
                 self.outputField.text=[NSString stringWithFormat:@"%d",convert(input, self.segmentController.selectedSegmentIndex)];
+                self.kind.text=@"Hours";
     }
+}
+- (IBAction)onClickClearButton:(id)sender {
+    self.outputField.text=@"0";
+    self.inputField.text=@"";
+    self.kind.text=@"";
 }
 
 - (void)viewDidLoad {
